@@ -23,3 +23,33 @@ export function uppercase(x: string) {
 export function greaterThanOrEqualTo(x: number, y: number) {
   expect(x).toBeGreaterThanOrEqual(y);
 }
+
+export function createId() {
+  return (Math.random() * 10 ** 10).toFixed();
+}
+
+type User = {
+  id: string;
+  gender: string;
+  name: {
+    first: string;
+    last: string;
+  };
+};
+
+type CreateUserResponse = {
+  results: Array<Omit<User, "id">>;
+};
+
+export async function createUser(): Promise<User> {
+  const response = await fetch("https://randomuser.me/api/");
+
+  expect(response.status).toBe(200);
+
+  const json = (await response.json()) as CreateUserResponse;
+
+  return {
+    id: createId(),
+    ...json.results[0],
+  };
+}

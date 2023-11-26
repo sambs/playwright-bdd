@@ -1,5 +1,9 @@
-import { scenario } from "../src";
-import { addOneAsync, createRandomNumber, greaterThanOrEqualTo } from "./utils";
+import { scenario } from "../../src";
+import {
+  addOneAsync,
+  createRandomNumber,
+  greaterThanOrEqualTo,
+} from "../utils";
 
 scenario("Promises are unwrapped")
   .when("I create a random number", createRandomNumber)

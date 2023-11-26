@@ -1,5 +1,5 @@
-import { scenario } from "../src";
-import { addOne, createRandomNumber, greaterThanOrEqualTo } from "./utils";
+import { scenario } from "../../src";
+import { addOne, createRandomNumber, greaterThanOrEqualTo } from "../utils";
 
 scenario("Testing some basic numbers")
   .when("I create a random number", createRandomNumber)

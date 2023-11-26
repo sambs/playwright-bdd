@@ -1,5 +1,5 @@
-import { scenario } from "../src";
-import { createRandomNumber, greaterThanOrEqualTo, uppercase } from "./utils";
+import { scenario } from "../../src";
+import { createRandomNumber, greaterThanOrEqualTo, uppercase } from "../utils";
 
 scenario("Typescript indicates errors with context")
   .when("I create a random number", createRandomNumber)
