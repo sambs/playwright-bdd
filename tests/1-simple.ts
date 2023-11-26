@@ -1,17 +1,5 @@
-import { expect } from "@playwright/test";
 import { scenario } from "../src";
-
-function createRandomNumber() {
-  return Math.random();
-}
-
-function addOne(x: number) {
-  return x + 1;
-}
-
-function greaterThanOrEqualTo(x: number, y: number) {
-  expect(x).toBeGreaterThanOrEqual(y);
-}
+import { addOne, createRandomNumber, greaterThanOrEqualTo } from "./utils";
 
 scenario("Testing some basic numbers")
   .when("I create a random number", createRandomNumber)
