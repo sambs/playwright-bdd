@@ -1,0 +1,14 @@
+{
+  "name": "playwright-bdd",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@playwright/test": "^1.39.0",
+    "typescript": "^5.2.2"
+  }
+}
