@@ -20,10 +20,6 @@ export function uppercase(x: string) {
   return x.toUpperCase();
 }
 
-export function greaterThanOrEqualTo(x: number, y: number) {
-  expect(x).toBeGreaterThanOrEqual(y);
-}
-
 export function createId() {
   return (Math.random() * 10 ** 10).toFixed();
 }
