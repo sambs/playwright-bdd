@@ -31,3 +31,4 @@ scenario("Testing some basic numbers")
 
 - It is not possible to pass test values from a step description due to the requirement of maintaining type safety.
 - The final `.run()` call is a little awkward and could potentially be forgotten. However it necessary to accommodate async step functions.
+- Currently reports cite the same line number within the wrapper library as the location of every test. It may be possible to fix this by instantiating the underlying `TestCase` class directly.
